@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 app.use(express.json());
 
-const GOOGLE_JWKS_URI = 'https://www.googleapis.com/oauth2/v3/certs'; 
+const GOOGLE_JWKS_URI = 'https://accounts.google.com/.well-known/jwks_uri'; 
 const CLIENT_ID = process.env.CLIENT_ID || 'YOUR_GOOGLE_CLIENT_ID_HERE';
 
 app.post('/verify-google-token', async (req, res) => {
